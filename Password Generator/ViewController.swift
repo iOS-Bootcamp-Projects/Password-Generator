@@ -9,9 +9,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var passwordLabel: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+          
+        
         // Do any additional setup after loading the view.
     }
 
@@ -19,8 +21,15 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+        
+        
     }
 
-
+    @IBAction func generatePassword(_ sender: NSButton) {
+       
+    let password = NSUUID().uuidString.replacingOccurrences(of: "-", with: "")
+        passwordLabel.stringValue = "\(password)"
+    }
+    
 }
 
