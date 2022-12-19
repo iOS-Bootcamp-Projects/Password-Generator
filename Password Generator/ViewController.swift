@@ -31,5 +31,6 @@ class ViewController: NSViewController {
         passwordLabel.stringValue = "\(password)"
     }
     
+    
 }
 
